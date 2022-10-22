@@ -103,6 +103,12 @@ public class BasicController {
         return "basic/comments";
     }
 
+    @GetMapping("/block")
+    public String block(Model model){
+        addUser(model);
+        return "basic/block";
+    }
+
     private void addUser(Model model){
         List<User> list = List.of(
                  new User("UserA", 10)
