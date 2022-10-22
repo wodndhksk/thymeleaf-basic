@@ -91,6 +91,12 @@ public class BasicController {
         return "basic/each";
     }
 
+    @GetMapping("/condition")
+    public String condition(Model model){
+        addUser(model);
+        return "basic/condition";
+    }
+
     private void addUser(Model model){
         List<User> list = List.of(
                  new User("UserA", 10)
